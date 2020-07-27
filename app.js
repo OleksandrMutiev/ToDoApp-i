@@ -26,7 +26,7 @@ app.set('trust proxy', 'loopback');
 
 app.use("/", router);
 
-const PORT = process.env.PORT || 3000;
+const PORT = 80 || 4000;
 
 app.listen(PORT, () => {
   console.log(`Server start on port: ${PORT}`);
