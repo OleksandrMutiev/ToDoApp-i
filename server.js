@@ -18,13 +18,7 @@ mongoose.connection.on("error", e => {
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:4200",
-      "http://127.0.0.1:4200",
-      "http://localhost:4000",
-      "http://localhost:3000",
-      "http://ec2-3-126-51-148.eu-central-1.compute.amazonaws.com"
-    ],
+    origin: ["http://localhost:4200"],
     credentials: true
   })
 );
@@ -33,7 +27,7 @@ app.set("trust proxy", "loopback");
 app.use("/", router);
 
 const PORT =
-  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 4000;
+  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 3000;
 
 app.listen(PORT, () => {
   console.log(`Server start on port: ${PORT}`);

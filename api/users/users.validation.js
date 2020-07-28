@@ -21,10 +21,12 @@ exports.registerUserValidation = {
     firstName: joi
       .string()
       .min(1)
-      .max(100),
+      .max(100)
+      .allow(""),
     lastName: joi
       .string()
       .min(1)
       .max(100)
+      .allow("")
   }
 };
