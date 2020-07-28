@@ -23,7 +23,7 @@ app.use(
       "http://127.0.0.1:4200",
       "http://localhost:4000",
       "http://localhost:3000",
-      "http://ec2-18-156-177-146.eu-central-1.compute.amazonaws.com"
+      "http://ec2-18-156-166-45.eu-central-1.compute.amazonaws.com"
     ],
     credentials: true
   })
