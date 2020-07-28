@@ -22,11 +22,12 @@ app.use(
     credentials: true
   })
 );
-app.set('trust proxy', 'loopback');
+app.set("trust proxy", "loopback");
 
 app.use("/", router);
 
-const PORT = 80 || 4000;
+const PORT =
+  process.env.NODE_ENV === "production" ? process.env.PORT || 80 : 4000;
 
 app.listen(PORT, () => {
   console.log(`Server start on port: ${PORT}`);
